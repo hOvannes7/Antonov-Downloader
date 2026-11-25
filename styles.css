@@ -1,0 +1,99 @@
+/* styles.css
+ * Внешний вид кнопки намеренно НЕ задаётся здесь: content.js клонирует родную кнопку
+ * «Нравится», поэтому фон, рамки, шрифты и отступы берутся у сайта.
+ * (Раньше тут стояли background: transparent / border: none по id — они перебивали
+ * стили сайта, из-за чего кнопка выглядела чужой.) Здесь только состояния и индикатор. */
+
+#antonov-download-btn {
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+#antonov-download-btn[disabled],
+#antonov-download-btn.antonov-busy {
+    opacity: 0.5;
+    cursor: progress;
+}
+
+#antonov-download-btn svg {
+    pointer-events: none;
+    flex-shrink: 0;
+}
+
+/* Индикатор прогресса */
+#antonov-download-progress {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 2147483000;
+    box-sizing: border-box;
+    min-width: 320px;
+    max-width: calc(100vw - 40px);
+    padding: 16px 20px;
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.85);
+    color: #fff;
+    font: 14px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+#antonov-download-progress .antonov-toast-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+#antonov-download-progress #antonov-cancel-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border: none;
+    border-radius: 4px;
+    background: transparent;
+    color: #fff;
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+#antonov-download-progress #antonov-cancel-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+#antonov-download-progress .antonov-bar {
+    height: 8px;
+    overflow: hidden;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+#antonov-download-progress #antonov-progress-bar {
+    width: 0;
+    height: 100%;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #4caf50, #8bc34a);
+    transition: width 0.3s;
+}
+
+#antonov-download-progress .antonov-toast-foot {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #aaa;
+}
+
+#antonov-download-progress #antonov-progress-status {
+    margin-left: 10px;
+}
+
+#antonov-download-progress.antonov-error #antonov-progress-bar {
+    background: #e53935;
+}
+
+#antonov-download-progress.antonov-error .antonov-toast-foot {
+    color: #ff8a80;
+}

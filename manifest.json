@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Antonov Downloader",
+  "version": "1.1",
+  "description": "Скачивание видео с antonov.media",
+  "icons": {
+    "16": "icons/16.png",
+    "48": "icons/48.png",
+    "96": "icons/96.png",
+    "128": "icons/128.png"
+  },
+  "host_permissions": [
+    "*://www.antonov.media/*",
+    "*://cdn.antonov.media/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://www.antonov.media/*"],
+      "js": ["utils/downloader.js", "utils/ts2mp4.js", "content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_start"
+    }
+  ]
+}

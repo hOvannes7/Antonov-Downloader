@@ -1,0 +1,38 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Qwen Code
+.qwen/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Node
+node_modules/
+
+# Build output / packed extension
+dist/
+*.zip
+*.rar
+*.crx
+*.pem
+
+# Downloaded videos (should not be committed)
+*.ts
+*.mp4
+*.m3u8
+
+# Temporary files
+tmp/
+temp/
+*.tmp
