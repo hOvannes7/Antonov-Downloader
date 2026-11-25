@@ -53,7 +53,6 @@ Antonov Downloader is a Google Chrome browser extension that allows you to downl
 
 ```
 antonov-downloader/
-├── .github/ISSUE_TEMPLATE/  # Issue templates
 ├── icons/                   # Icons
 ├── utils/
 │   ├── downloader.js        # HLS utilities (playlists, segment download)
@@ -61,7 +60,6 @@ antonov-downloader/
 ├── content.js               # Page script
 ├── manifest.json            # Extension manifest
 ├── styles.css               # Styles
-├── CONTRIBUTING.md / CONTRIBUTING.en.md
 ├── LICENSE
 └── README.md / README.en.md
 ```
@@ -95,15 +93,6 @@ antonov-downloader/
 ## ⚖️ Disclaimer
 
 This is an unofficial project and is not affiliated with antonov.media. The extension is intended for personal use: download only what you are entitled to save, and follow the site's rules and the laws of your country. The author is not responsible for how the extension is used.
-
-## 🤝 Contributing
-
-Welcome:
-- Bug reports
-- Feature suggestions
-- Pull Requests
-
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) before making changes.
 
 ## 📄 License
 
